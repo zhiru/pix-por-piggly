@@ -89,7 +89,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 				Leia o <strong>QRCode</strong> abaixo com o aplicativo
 				<strong>do seu banco</strong> e realize o pagamento do Pix:
 			</p>
-			<img src="<?=$pix->getQrCode()['url'];?>"/>
+			<img src="<?=str_replace("http:","", $pix->getQrCode()['url']);?>"/>
 		</div>
 	</div>
 	<?php endif; ?>
